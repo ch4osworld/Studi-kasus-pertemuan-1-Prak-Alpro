@@ -1,0 +1,32 @@
+#include<iostream>
+#include<fstream>
+#include <iomanip>
+using namespace std;
+main()
+{
+	string p[100];
+	float m,x,y,h[100],total,bayar;
+	float a,jumlahbayar;
+	cout<<"Menu"<<endl;
+	cout<<"a.ayam goreng RP.17.000"<<endl;
+	cout<<"b.ayam bakar RP.21.000"<<endl<<endl;
+	cout<<"memesan berapa menu : ";cin>>m;
+	cin.ignore();
+	for(int i=0; i<m;i++)
+	{
+		cout<<"pilihan "<<i+1<<" : ";getline(cin,p[i]);
+		cout<<"harga : ";cin>>h[i];
+		total+=h[i];	
+		cin.ignore();	
+	}
+	if(total> 45000)
+	{
+		y=total*10/100;
+		jumlahbayar=total-y;
+		cout<<"jumlah uang yang harus di bayar = "<<jumlahbayar<<endl;
+		cout<<"Bayar        : Rp.";cin>>bayar;
+	}
+	else if(total<=45000)
+	{
+		jumlahbayar=total;
+		cout<<"jumlah uang yang harus di bayar = "<<jumlahbayar<<endl;
